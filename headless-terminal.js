@@ -86,9 +86,9 @@ class HeadlessTerminal extends EventEmitter {
   }
 
   _convertLine(line) {
-    const chars = [],
-      str = pad(line.str, this.termBuffer.width),
-      attr = null;
+    const chars = [];
+    const str = pad(line.str, this.termBuffer.width);
+    let attr = null;
 
     const length = str.length;
     chars.length = length;
